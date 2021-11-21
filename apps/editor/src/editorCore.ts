@@ -65,7 +65,7 @@ import { getHTMLRenderConvertors } from './markdown/htmlRenderConvertors';
  *         @param {function} [options.events.beforeConvertWysiwygToMarkdown] - It would be emitted before converting wysiwyg to markdown with markdown text
  *     @param {Object} [options.hooks] - Hooks
  *         @param {addImageBlobHook} [options.hooks.addImageBlobHook] - hook for image upload
- *     @param {string} [options.language='en-US'] - language
+ *     @param {string} [options.language='zh-CN'] - language
  *     @param {boolean} [options.useCommandShortcut=true] - whether use keyboard shortcuts to perform commands
  *     @param {boolean} [options.usageStatistics=true] - send hostname to google analytics
  *     @param {Array.<string|toolbarItemsValue>} [options.toolbarItems] - toolbar items.
@@ -128,7 +128,7 @@ class ToastUIEditorCore {
         initialEditType: 'markdown',
         height: '300px',
         minHeight: '200px',
-        language: 'en-US',
+        language: 'zh-CN',
         useCommandShortcut: true,
         usageStatistics: true,
         toolbarItems: [
@@ -221,6 +221,8 @@ class ToastUIEditorCore {
       toastMark: this.toastMark,
       useCommandShortcut,
       mdPlugins,
+      autofocus: this.options.autofocus,
+      updatedScroll: this.options.updatedScroll,
     });
 
     this.preview = new MarkdownPreview(this.eventEmitter, {

@@ -44,6 +44,10 @@ export default abstract class EditorBase implements Base {
 
   extraPlugins!: PluginProp[];
 
+  autofocus!: boolean;
+
+  updatedScroll!: boolean;
+
   constructor(eventEmitter: Emitter) {
     this.el = document.createElement('div');
     this.el.className = 'toastui-editor';

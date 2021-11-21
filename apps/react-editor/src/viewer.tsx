@@ -1,6 +1,6 @@
 import React from 'react';
 // @ts-ignore
-import Viewer from '@toast-ui/editor/dist/toastui-editor-viewer';
+import Viewer from '@zhousg/tui-editor/dist/toastui-editor-viewer';
 import { ViewerProps, EventNames } from '../index';
 
 export default class ViewerComponent extends React.Component<ViewerProps> {

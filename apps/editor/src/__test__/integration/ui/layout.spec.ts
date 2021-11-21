@@ -4,7 +4,7 @@ import { VNode } from '@/ui/vdom/vnode';
 import html from '@/ui/vdom/template';
 import EventEmitter from '@/event/eventEmitter';
 import { cls } from '@/utils/dom';
-import '@/i18n/en-us';
+import '@/i18n/zh-cn';
 
 const EDITOR_CLASS = 'toastui-editor';
 

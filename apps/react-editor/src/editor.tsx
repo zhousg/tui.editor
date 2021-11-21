@@ -1,5 +1,5 @@
 import React from 'react';
-import Editor from '@toast-ui/editor';
+import Editor from '@zhousg/tui-editor';
 import { EditorProps, EventNames } from '../index';
 
 export default class extends React.Component<EditorProps> {

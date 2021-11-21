@@ -44,6 +44,8 @@ interface MarkdownOptions {
   toastMark: ToastMark;
   useCommandShortcut?: boolean;
   mdPlugins?: PluginProp[];
+  autofocus: boolean;
+  updatedScroll: boolean;
 }
 
 const EVENT_TYPE = 'cut';
@@ -73,15 +75,19 @@ export default class MdEditor extends EditorBase {
     this.commands = this.createCommands();
     this.specs.setContext({ ...this.context, view: this.view });
     this.createClipboard();
-    this.eventEmitter.listen('changePreviewTabWrite', () => this.toggleActive(true));
+    this.autofocus = options.autofocus;
+    this.updatedScroll = options.updatedScroll;
+    this.eventEmitter.listen('changePreviewTabWrite', (isInit) => this.toggleActive(true, isInit));
     this.eventEmitter.listen('changePreviewTabPreview', () => this.toggleActive(false));
     this.initEvent();
   }
 
-  private toggleActive(active: boolean) {
+  private toggleActive(active: boolean, isInit?: boolean) {
     toggleClass(this.el!, 'active', active);
     if (active) {
-      this.focus();
+      if (!(isInit && !this.autofocus)) {
+        this.focus();
+      }
     } else {
       this.blur();
     }
@@ -237,8 +243,11 @@ export default class MdEditor extends EditorBase {
           const editResult = this.toastMark.editMarkdown(startPos, endPos, changed);
 
           this.eventEmitter.emit('updatePreview', editResult);
-
-          tr.setMeta('editResult', editResult).scrollIntoView();
+          if (this.updatedScroll) {
+            tr.setMeta('editResult', editResult).scrollIntoView();
+          } else {
+            tr.setMeta('editResult', editResult);
+          }
         }
       });
     }

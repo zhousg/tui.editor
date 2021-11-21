@@ -5,7 +5,7 @@
 import extend from 'tui-code-snippet/object/extend';
 import Map from '../utils/map';
 
-const DEFAULT_CODE = 'en-US';
+const DEFAULT_CODE = 'zh-CN';
 
 /**
  * Class I18n

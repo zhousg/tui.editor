@@ -1,4 +1,4 @@
-import '@/i18n/en-us';
+import '@/i18n/zh-cn';
 import { oneLineTrim, stripIndents, source } from 'common-tags';
 import { Emitter } from '@t/event';
 import { EditorOptions } from '@t/editor';

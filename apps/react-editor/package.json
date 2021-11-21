@@ -1,6 +1,6 @@
 {
-  "name": "@toast-ui/react-editor",
-  "version": "3.1.1",
+  "name": "@zhousg/react-tui-editor",
+  "version": "3.1.11",
   "description": "TOAST UI Editor for React",
   "files": [
     "dist",
@@ -16,12 +16,12 @@
   },
   "homepage": "https://ui.toast.com",
   "bugs": {
-    "url": "https://github.com/nhn/tui.editor/issues"
+    "url": "https://github.com/zhousg/tui.editor/issues"
   },
-  "author": "NHN. FE Development Lab <dl_javascript@nhn.com>",
+  "author": "ZHOUSG. FE Development Lab <zhoushugang@itcast.cn>",
   "repository": {
     "type": "git",
-    "url": "https://github.com/nhn/tui.editor.git",
+    "url": "https://github.com/zhousg/tui.editor.git",
     "directory": "apps/react-editor"
   },
   "license": "MIT",
@@ -35,6 +35,6 @@
     "react-dom": "^17.0.1"
   },
   "dependencies": {
-    "@toast-ui/editor": "^3.1.1"
+    "@zhousg/tui-editor": "^3.1.11"
   }
 }

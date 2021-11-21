@@ -5,7 +5,7 @@ import html from '@/ui/vdom/template';
 import { render } from '@/ui/vdom/renderer';
 import { Toolbar } from '@/ui/components/toolbar/toolbar';
 import { cls } from '@/utils/dom';
-import '@/i18n/en-us';
+import '@/i18n/zh-cn';
 
 function getElement(selector: string) {
   return document.querySelector<HTMLElement>(selector)!;

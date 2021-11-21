@@ -86,5 +86,8 @@
     "apps/*",
     "libs/*",
     "plugins/*"
-  ]
+  ],
+  "dependencies": {
+    "@zhousg/tui-editor": "file:apps/editor"
+  }
 }

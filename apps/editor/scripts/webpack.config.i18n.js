@@ -26,7 +26,7 @@ function getOptimizationConfig(minify) {
 function getEntries() {
   const entries = entry('./src/i18n/*.ts');
 
-  delete entries['en-us'];
+  delete entries['zh-cn'];
   delete entries.i18n;
 
   return entries;
@@ -48,9 +48,9 @@ module.exports = (env) => {
     externals: [
       {
         '../editorCore': {
-          commonjs: '@toast-ui/editor',
-          commonjs2: '@toast-ui/editor',
-          amd: '@toast-ui/editor',
+          commonjs: '@zhousg/tui-editor',
+          commonjs2: '@zhousg/tui-editor',
+          amd: '@zhousg/tui-editor',
           root: ['toastui', 'Editor'],
         },
       },

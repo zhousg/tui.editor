@@ -7,7 +7,7 @@ import '@/css/contents.css';
 import '@/css/preview-highlighting.css';
 import '@/css/md-syntax-highlighting.css';
 
-import './i18n/en-us';
+import './i18n/zh-cn';
 
 export default Editor;
 export { Editor, EditorCore };
